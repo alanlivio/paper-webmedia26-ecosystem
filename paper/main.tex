@@ -16,6 +16,8 @@
 \usepackage{stfloats}
 \usepackage{booktabs}
 \usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{xurl}
 
 \lstset{
   basicstyle=\ttfamily\small,
@@ -28,7 +30,7 @@
 
 \begin{document}
 
-\title{A new Ginga Developer Ecosystem with \texttt{ginga.org.br} portal, and \texttt{ginga-playground} and \texttt{ginga-code} tools}
+\title{A new Ginga Developer Ecosystem with \texttt{ginga.org.br} portal, \texttt{ginga-playground} and \texttt{ginga-code} tools}
 
 \author{Alan L. V. Guedes}
 \email{a.guedes@reading.ac.uk}
@@ -64,7 +66,7 @@
 \renewcommand{\shortauthors}{Guedes et al.}
 
 \begin{abstract}
-The authoring and execution of Ginga-NCL/HTML5 applications for digital television (DTV) have long been constrained by the lack of developer accessibility to lightweight prototyping and testing tools. In this paper, we present a new \textbf{Ginga Developer Ecosystem} designed to lower the barrier to entry for Ginga development. The ecosystem integrates three pillars: (1) \texttt{ginga.org.br}, a web portal using a modern static website generator to host fully reviewed Ginga documentation and the NCL Handbook; (2) \texttt{ginga-playground}, a browser-native code editor and execution of Ginga-NCL/HTML5 applications; and (3) \texttt{ginga-code}, a Visual Studio Code extension acting as a launch tool of Ginga-NCL/HTML5 applications directly from the IDE.
+The authoring and execution of Ginga-NCL and HTML5 applications for digital television (DTV) have long been constrained by the lack of developer access to lightweight prototyping and testing tools. In this paper, we present a new \textbf{Ginga Developer Ecosystem} designed to lower the barrier to entry for Ginga development. The ecosystem integrates three pillars: (1) \texttt{http://ginga.org.br}, a web portal using a modern static website generator to host a introduction Ginga documentation, NCL  Handbook and links to standards; (2) \texttt{ginga-playground}, a browser-native workbench for editing and executing applications; and (3) \texttt{ginga-code}, a Visual Studio Code extension acting as a launcher for applications directly from an IDE.
 \end{abstract}
 
 \keywords{Ginga-NCL, Developer Ecosystem, Web Workbench, VS Code Extension, Debug Bridge, CanvasKit, Headless Execution}
@@ -88,14 +90,14 @@ The authoring and execution of Ginga-NCL/HTML5 applications for digital televisi
 \begin{subfigure}[b]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{assets/playground.png}
-  \caption{Ginga Playground at Web}
+  \caption{Ginga Playground on the Web}
   \label{fig:playground}
 \end{subfigure}
 \hfill
 \begin{subfigure}[b]{0.48\textwidth}
   \centering
   \includegraphics[width=\textwidth]{assets/vscode.png}
-  \caption{Ginga VS Code Extension at Desktop}
+  \caption{Ginga VS Code Extension on Desktop}
   \label{fig:vscode}
 \end{subfigure}
 \Description{Screenshots of the Ginga Developer Ecosystem components: the main portal landing page, interactive API documentation, web-based playground workbench, and the VS Code debugger extension.}
@@ -107,18 +109,26 @@ The authoring and execution of Ginga-NCL/HTML5 applications for digital televisi
 \section{Introduction}
 \label{sec:intro}
 
-The Ginga middleware is the international standard for interactive digital television by both the ITU-T~\cite{ITU_H761} and the Brazilian Digital Terrestrial Television System (SBTVD)~\cite{abnt_15606_2_2023}. Ginga utilizes the Nested Context Language (NCL)---an XML-based declarative multimedia language. As the official presentation engine for interactive television applications, the Ginga standard is legally mandated and installed on 100\% of certified Digital TV sets and set-top boxes sold in Brazil and several other Latin American countries adopting the ISDB-T framework.
+The Ginga middleware is the international standard for interactive digital television by both the ITU-T~\cite{ITU_H761} and the Brazilian Digital Terrestrial Television System (SBTVD)~\cite{abnt_15606_2_2023}. Ginga utilizes the Nested Context Language (NCL)---an XML-based declarative multimedia language. As the official middleware for interactive television applications, the Ginga standard is legally mandated and installed on 100\% of certified Digital TV sets and set-top boxes sold in Brazil and several other Latin American countries adopting the ISDB-T framework.
 
-Despite its standardization and wide adoption across SBTVD and international broadcast networks, the lack of developer accessibility to testing and prototyping tools has historically been the primary barrier for Ginga developers. Traditional developer workflows require configuring native middleware libraries, installing platform-specific dependencies, or relying on heavy set-top box (STB) hardware emulators~\cite{lima2018ginga, moreno2010conciliando}. To overcome this lack of accessibility, we introduce a new \textbf{Ginga Developer Ecosystem}, an open-source development suite unifying web authoring, portal demonstration, and IDE launching. Built around the modular \texttt{gingaf} presentation engine~\cite{gingaf2026}\footnote{\url{https://github.com/ginga-org-br/gingaf}}, the ecosystem integrates three core pillars: the \texttt{ginga.org.br} portal\footnote{\url{https://ginga-org-br.github.io/ginga.org.br/}}, \texttt{ginga-playground}\footnote{\url{https://ginga-org-br.github.io/gingaf/playground/}}, and \texttt{ginga-code}\footnote{\url{https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code}}.
+Despite its standardization and wide adoption across SBTVD and international broadcast networks, the lack of developer access to testing and prototyping tools has historically been the primary barrier for Ginga developers. Traditional developer workflows require configuring native OS libraries, installing platform-specific dependencies, or relying on heavy set-top box (STB) hardware emulators~\cite{lima2018ginga, moreno2010conciliando}. To overcome this lack of access, we introduce a new \textbf{Ginga Developer Ecosystem}, an open-source development suite unifying web authoring, portal demonstration, and IDE launching. Built around the modular \texttt{gingaf} presentation engine~\cite{gingaf2026}, the ecosystem integrates three core pillars:
+
+\begin{itemize}[leftmargin=*]
+  \item The Ginga portal: \textcolor{ACMDarkBlue}{\url{http://ginga.org.br}};
+  \item The \texttt{ginga-playground} web editor:\\ \textcolor{ACMDarkBlue}{\url{https://ginga.org.br/gingaf/playground/}}; and
+  \item The \texttt{ginga-code} extension:\\ \textcolor{ACMDarkBlue}{\url{https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code}}.
+\end{itemize}
+
+To support reproducibility, the source code, unit tests, and demonstration videos are available at \textcolor{ACMDarkBlue}{\url{https://github.com/orgs/ginga-org-br/repositories}}. 
 
 The remainder of this paper is structured as follows. Section~\ref{sec:related} reviews related work in Ginga middleware tooling. Section~\ref{sec:ecosystem} details the architecture of the Ginga Developer Ecosystem and its core pillars. Finally, Section~\ref{sec:remarks} outlines final remarks and future directions.
 
 \section{Related Work}
 \label{sec:related}
 
-The development of Ginga players has historically been led by the TeleMídia Lab at PUC-Rio, producing several versions. PUC-Rio Ginga v0.13.6~\cite{ginga2013,moreno2010conciliando}\footnote{\url{https://github.com/TeleMidia/ginga/releases/tag/v0.13.6}} was designed for resource-constrained early-generation digital TV receivers. PUC-Rio Ginga v1.0~\cite{ginga2018,dodsworth2018dynamic} modernised the renderer and moved to a mono-threaded model inspired by synchronous execution. However, such implementations share a fundamental limitation: they are deeply tethered to native desktop libraries, making web execution impossible. Another earlier work was WebNCL~\cite{webncl2013}, which provided a web-based NCL presentation engine but did not support Lua scripting.
+The development of Ginga players has historically been led by the TeleMídia Lab at PUC-Rio, producing several versions. PUC-Rio Ginga v0.13.6~\cite{ginga2013,moreno2010conciliando} was designed for resource-constrained early-generation digital TV receivers. PUC-Rio Ginga v1.0~\cite{ginga2018,dodsworth2018dynamic} modernized the renderer and moved to a mono-threaded model inspired by synchronous execution. However, such implementations share a fundamental limitation: they are deeply tethered to native desktop libraries, making web execution impossible. An earlier work was WebNCL~\cite{webncl2013}, which provided a web-based NCL presentation engine but did not support Lua scripting.
 
-The closest related works to our initiative are NuGinga~\cite{nuginga18} and NuGinga Playcode~\cite{nuginga_playcode20}. Developed by Sidia, NuGinga~\cite{nuginga18} introduced a Node.js-based Ginga middleware engine. Subsequently, NuGinga Playcode~\cite{nuginga_playcode20} introduced a Node.js-based authoring tool for Ginga-NCL and NCLua using cross-compilation techniques; however, given its Node.js-based architecture, it requires server-side execution infrastructure. Also, it lacks support for Ginga-HTML5 application coding. In contrast, the proposed Ginga Developer Ecosystem and its \texttt{ginga-playground} workbench provide a fully client-side, zero-installation environment that natively supports both Ginga-NCL and Ginga-HTML5 (via CCWS integration).
+The closest related works to our initiative are NuGinga~\cite{nuginga18} and NuGinga Playcode~\cite{nuginga_playcode20}. Developed by Sidia, NuGinga~\cite{nuginga18} introduced a Node.js-based Ginga middleware engine. Subsequently, NuGinga Playcode~\cite{nuginga_playcode20} introduced a Node.js-based authoring tool for Ginga-NCL and NCLua using cross-compilation techniques; however, given its Node.js-based architecture, it requires server-side execution infrastructure. Furthermore, it lacks support for Ginga-HTML5 application coding. In contrast, the proposed Ginga Developer Ecosystem and its \texttt{ginga-playground} workbench provide a fully client-side, zero-installation environment that natively supports both Ginga-NCL and Ginga-HTML5 (via CCWS integration).
 
 \section{Ginga Developer Ecosystem} \label{sec:ecosystem}
 
@@ -133,8 +143,8 @@ The closest related works to our initiative are NuGinga~\cite{nuginga18} and NuG
 
 \node [block] (gingaf) at (0,2) {\href{https://github.com/ginga-org-br/gingaf}{\textbf{\texttt{gingaf} Engine}}};
 \node [block] (vscode) at (-2.2,0) {\href{https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code}{\textbf{\texttt{ginga-code}}}};
-\node [block] (playground) at (2.2,0) {\href{https://ginga-org-br.github.io/gingaf/playground/}{\textbf{\texttt{ginga-playground}}}};
-\node [block] (portal) at (0,-2) {\href{https://ginga-org-br.github.io/ginga.org.br/}{\textbf{\texttt{ginga.org.br} Portal}}};
+\node [block] (playground) at (2.2,0) {\href{https://ginga.org.br/gingaf/playground/}{\textbf{\texttt{ginga-playground}}}};
+\node [block] (portal) at (0,-2) {\href{https://ginga.org.br/}{\textbf{\texttt{ginga.org.br} Portal}}};
 \node [dev] (dev1) at (-2.2,-4.2) {{\Large\faUser}\\[0.1ex] Developer at\\[-0.5ex] Desktop};
 \node [dev] (dev2) at (2.2,-4.2) {{\Large\faUser}\\[0.1ex] Developer at\\[-0.5ex] Browser};
 
@@ -164,11 +174,11 @@ These components are organized into the following sections.
 
 The \texttt{gingaf} presentation engine is an open-source, cross-platform Ginga digital television middleware player built on Dart and the Flutter framework. Unlike traditional native middleware architectures that tightly bind execution state machines directly to OS graphics contexts (such as SDL or GTK) and native AV pipelines, \texttt{gingaf} introduces a decoupled layered architecture that strictly separates headless document logic components from visual UI components.
 
-The core execution engine (\texttt{ncldoc} / \texttt{NCLDocument}) manages the declarative NCL state machine, temporal synchronization loops, and reactive DOM events entirely in pure and cross-platform Dart code. The ginga presentation layer sits above this logic core, leveraging Flutter to paint visual elements natively on desktop and mobile targets or onto a hardware-accelerated CanvasKit surface (a WebAssembly build of Skia) for in-browser web execution. The engine natively supports \texttt{Ginga-NCL} (including embedded Lua scripting via a pure Dart interpreter), \texttt{Ginga-HTML5}, and \texttt{Ginga-CC-Webservices} (CCWS REST APIs exposed via an internal HTTP server). This modular design powers the rendering surfaces of the web workbench (\texttt{ginga-playground}) and desktop execution targets (\texttt{ginga-code}).
+The core execution engine (\texttt{ncldoc} / \texttt{NCLDocument}) manages the declarative NCL state machine, temporal synchronization loops, and reactive DOM events entirely in pure and cross-platform Dart code. The Ginga presentation layer sits above this logic core, leveraging Flutter to paint visual elements natively on desktop and mobile targets or onto a hardware-accelerated CanvasKit surface (a WebAssembly build of Skia) for in-browser web execution. The engine natively supports \texttt{Ginga-NCL} (including embedded Lua scripting via a pure Dart interpreter), \texttt{Ginga-HTML5}, and \texttt{Ginga-CC-Webservices} (CCWS REST APIs exposed via an internal HTTP server). This modular design powers the rendering surfaces of the web workbench (\texttt{ginga-playground}) and desktop execution targets (\texttt{ginga-code}).
 
 \subsection{New \texttt{ginga.org.br} Portal}
 
-The official portal \texttt{ginga.org.br}\footnote{\url{https://ginga-org-br.github.io/ginga.org.br/}} serves as the central hub of the Ginga Developer Ecosystem. This new version converts the old portal architecture, featuring fully reviewed text and documentation with multilingual support across three languages: Portuguese, Spanish, and English. It is built using Zensical\footnote{\url{https://zensical.org/}}, a modern static website generator. The portal integrates specification documentation and already includes the complete NCL Handbook (Figure~\ref{fig:portal2}) alongside live code examples.
+The official portal \texttt{ginga.org.br} serves as the central hub of the Ginga Developer Ecosystem. This new version revamps the old portal architecture, featuring fully reviewed text and documentation with multilingual support across three languages: Portuguese, Spanish, and English. It is built using Zensical\footnote{\url{https://zensical.org/}}, a modern static website generator. The portal integrates specification documentation and already includes the complete NCL Handbook (Figure~\ref{fig:portal2}) alongside live code examples.
 
 \subsection{\texttt{ginga-playground}}
 
@@ -176,12 +186,12 @@ The \texttt{ginga-playground} is a browser-native code workbench that provides a
 
 \subsection{\texttt{ginga-code}}
 
-For desktop development, the \texttt{ginga-code}\footnote{\url{https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code}} extension enables execution of Ginga-NCL and HTML5 applications directly within Visual Studio Code. The extension automatically downloads the native \texttt{gingaf} desktop binary matching the host operating system to serve as an IDE launcher. It then provides an interactive button within the IDE interface that allows developers to launch and execute the Ginga application currently open in the active editor. 
+For desktop development, the \texttt{ginga-code} extension enables the execution of Ginga-NCL and HTML5 applications directly within Visual Studio Code. The extension automatically downloads the native \texttt{gingaf} desktop binary matching the host operating system to serve as an IDE launcher. It then provides an interactive button within the IDE interface that allows developers to launch and execute the Ginga application currently open in the active editor. 
 
 \section{Final Remarks}
 \label{sec:remarks}
 
-The Ginga Developer Ecosystem bridges web distribution and tool launcher interfaces for NCL digital television applications. By integrating \texttt{ginga.org.br}, \texttt{ginga-playground}, and \texttt{ginga-code} on top of the \texttt{gingaf} engines, the suite eliminates environment setup friction and provides instant preview capabilities. 
+The Ginga Developer Ecosystem bridges web distribution and tool launcher interfaces for NCL digital television applications. By integrating \texttt{ginga.org.br}, \texttt{ginga-playground}, and \texttt{ginga-code} on top of the \texttt{gingaf} engine, the suite eliminates environment setup friction and provides instant preview capabilities. 
 
 Future work will focus on expanding comprehensive \texttt{ginga.org.br} documentation for \texttt{Ginga-HTML5} and \texttt{Ginga-CCWS}, as well as introducing an NCL Language Server Protocol (LSP) provider for static semantic verification.
 
