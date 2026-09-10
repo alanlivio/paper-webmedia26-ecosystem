@@ -18,6 +18,7 @@
 \usepackage{fontawesome5}
 \usepackage{enumitem}
 \usepackage{xurl}
+\hypersetup{urlcolor=black}
 
 \lstset{
   basicstyle=\ttfamily\small,
@@ -114,12 +115,12 @@ The Ginga middleware is the international standard for interactive digital telev
 Despite its standardization and wide adoption across SBTVD and international broadcast networks, the lack of developer access to testing and prototyping tools has historically been the primary barrier for Ginga developers. Traditional developer workflows require configuring native OS libraries, installing platform-specific dependencies, or relying on heavy set-top box (STB) hardware emulators~\cite{lima2018ginga, moreno2010conciliando}. To overcome this lack of access, we introduce a new \textbf{Ginga Developer Ecosystem}, an open-source development suite unifying web authoring, portal demonstration, and IDE launching. Built around the modular \texttt{gingaf} presentation engine~\cite{gingaf2026}, the ecosystem integrates three core pillars:
 
 \begin{itemize}[leftmargin=*]
-  \item The Ginga portal: \textcolor{ACMDarkBlue}{\url{http://ginga.org.br}};
-  \item The \texttt{ginga-playground} web editor:\\ \textcolor{ACMDarkBlue}{\url{https://ginga.org.br/gingaf/playground/}}; and
-  \item The \texttt{ginga-code} extension:\\ \textcolor{ACMDarkBlue}{\url{https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code}}.
+  \item The Ginga portal: \textbf{\url{http://ginga.org.br}};
+  \item The \texttt{ginga-playground} web editor:\\ \textbf{\url{https://ginga.org.br/gingaf/playground/}}; and
+  \item The \texttt{ginga-code} extension:\\ \textbf{\url{https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code}}.
 \end{itemize}
 
-To support reproducibility, the source code, unit tests, and demonstration videos are available at \textcolor{ACMDarkBlue}{\url{https://github.com/orgs/ginga-org-br/repositories}}. 
+To support reproducibility, the source code, unit tests, and demonstration videos are available at \textbf{\url{https://github.com/orgs/ginga-org-br/repositories}}. 
 
 The remainder of this paper is structured as follows. Section~\ref{sec:related} reviews related work in Ginga middleware tooling. Section~\ref{sec:ecosystem} details the architecture of the Ginga Developer Ecosystem and its core pillars. Finally, Section~\ref{sec:remarks} outlines final remarks and future directions.
 
