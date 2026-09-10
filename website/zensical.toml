@@ -1,5 +1,5 @@
 [project]
-site_name = "New Ginga Developer Ecosystem with ginga.org.br, ginga-playground and ginga-vscode"
+site_name = "A new Ginga Developer Ecosystem with ginga.org.br portal, ginga-playground and ginga-code tools"
 site_description = "Unified developer ecosystem for Nested Context Language (NCL) integrating ginga.org.br, ginga-playground, and ginga-vscode."
 site_author = "Alan L.V. Guedes"
 copyright = "Copyright &copy; 2026 The authors"

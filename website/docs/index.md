@@ -1,10 +1,17 @@
 ---
-title: "New Ginga Developer Ecosystem with ginga.org.br, ginga-playground and ginga-vscode"
+title: "A new Ginga Developer Ecosystem with ginga.org.br portal, ginga-playground and ginga-code tools"
 template: "home.html"
 hide:
   - navigation
 authors:
-  - name: Anonymous Author(s)
+  - name: Alan L. V. Guedes
+    institution: University of Reading
+  - name: Paulo Victor Borges
+    institution: PUC-Rio
+  - name: Daniel Moraes
+    institution: PUC-Rio
+  - name: Sergio Colcher
+    institution: PUC-Rio
 conference: "WTVDI 2026"
 links:
   - name: Paper
@@ -19,7 +26,7 @@ links:
   - name: LaTeX/Website Code
     url: https://github.com/alanlivio/paper-gingaf-ecosystem
     icon: ri:github-line
-description: "Unified Ginga developer ecosystem incorporating ginga.org.br, ginga-playground, and ginga-vscode."
+description: "A new Ginga Developer Ecosystem with ginga.org.br portal, ginga-playground and ginga-code tools."
 ---
 
 <div class="abstract-container" markdown="1">
@@ -42,11 +49,11 @@ Interactive development and debugging of Nested Context Language (NCL) applicati
 
 ```bibtex
 @inproceedings{ginga_ecosystem2026,
-  title={New Ginga Developer Ecosystem with ginga.org.br, ginga-playground and ginga-vscode},
-  author={Guedes, Alan L. V.},
-  booktitle={Anais Estendidos do XXXII Simpósio Brasileiro de Sistemas Multimídia e Web (WTVDI 2026)},
-  pages={1--4},
-  year={2026},
-  doi={10.5753/webmedia.2026.gingaf-ecosystem}
+  author    = {Guedes, Alan L. V. and Borges, Paulo Victor and Moraes, Daniel and Colcher, Sergio},
+  title     = {A new Ginga Developer Ecosystem with ginga.org.br portal, ginga-playground and ginga-code tools},
+  booktitle = {Anais Estendidos do XXXII Simpósio Brasileiro de Sistemas Multimídia e Web (WTVDI 2026)},
+  location  = {Lavras, Brazil},
+  year      = {2026},
+  doi       = {10.5753/webmedia.2026.gingaf-ecosystem}
 }
 ```
