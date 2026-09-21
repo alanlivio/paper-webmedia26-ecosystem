@@ -9,6 +9,47 @@ header: 'Ginga Developer Ecosystem — WTVDI / WebMedia 2026'
 .grayscale {
   filter: grayscale(100%);
 }
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 14px 28px;
+  width: 100%;
+  margin-top: 8px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 18px;
+  width: 100%;
+  margin-top: 18px;
+}
+.grid-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.grid-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  background-color: transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.grid-card p {
+  margin: 8px 0 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #1f2328;
+}
+.grid-card a {
+  color: #0969da;
+  font-weight: 700;
+  text-decoration: underline;
+}
 </style>
 
 <!--
@@ -23,11 +64,11 @@ _header: ""
 # A New Ginga Developer Ecosystem: ginga.org.br Portal, ginga-playground and ginga-code Tools
 
 **Alan L. V. Guedes**$^1$, **Paulo Victor Borges**$^2$, **Daniel Moraes**$^2$, **Sergio Colcher**$^2$
-$^1$University of Reading, UK | $^2$PUC-Rio, Brazil
+$^1$Universidade de Reading, Reino Unido | $^2$PUC-Rio, Brasil
 
 *XXXII Simpósio Brasileiro de Sistemas Multimídia e Web (WebMedia 2026)*
 
-**Paper Website (slides, code, demo)**:
+**Website do Artigo (slides, código, demo)**:
 https://alanlivio.github.io/paper-webmedia26-ecosystem/
 
 </div>
@@ -46,138 +87,84 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 
 # Agenda
 
-- **Context**
-- **Proposed Solution**
-- **Results**
-- **Final Remarks**
+- **Contexto e Definição do Problema**
+- **Solução Proposta**
+- **Considerações Finais**
 
 ---
 
-# Motivation & Context
+<!-- _class: invert -->
+<!-- _paginate: skip -->
 
-**Widespread DTV Deployment**
-- Ginga (ITU-T H.761 / ABNT 15606-2) is installed on 100% of certified Digital TV receivers in Latin America.
-- Reaches over 60 million people daily.
-
-**The Developer Challenge**
-- Authoring and execution have been constrained by the lack of lightweight developer tooling.
-- Traditional development required native Linux toolchains, manual C++ compilation, or hardware set-top boxes.
-
-**Goal**
-- Lower barriers to entry for Ginga development with zero-install, modern web and IDE tools.
+# Contexto e Definição do Problema
 
 ---
 
-# The Three Pillars of the Ecosystem
+# Contexto e Definição do Problema
 
-**Pillar 1: `ginga.org.br` Web Portal**
-- Centralized knowledge hub, NCL handbook, tutorials, and standard references.
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 32px; align-items: start; margin-top: 12px;">
 
-**Pillar 2: `ginga-playground` Workbench**
-- Browser-native interactive environment to edit and run NCL and HTML5 applications instantly.
+<div>
 
-**Pillar 3: `ginga-code` VS Code Extension**
-- IDE integration offering syntax highlighting, application launching, and live debug bridge.
+**Contexto: Ampla Disseminação da DTV**
+- O Ginga (ITU-T H.761 / ABNT 15606-2) está instalado em 100% dos receptores de TV Digital certificados na América Latina.
+- Alcance diário superior a 60 milhões de telespectadores.
+- Padrão essencial para serviços interativos de transmissão na TV 2.5 e TV 3.0.
+
+</div>
+
+<div>
+
+**Problema: O Desafio dos Desenvolvedores**
+- Lacuna de ferramental: carência de ambientes leves e acessíveis para desenvolvimento e testes.
+- Fluxos tradicionais exigiam toolchains Linux nativas, compilação em C++ ou receptores de TV (STBs) dedicados.
+
+**Objetivo**
+- Reduzir barreiras de entrada com ferramentas modernas para web e IDEs, sem necessidade de instalação.
+
+</div>
+
+</div>
 
 ---
 
-# Pillar 1: ginga.org.br Web Portal
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# Solução Proposta
+
+---
+
+# Os Quatro Pilares do Ecossistema
+
+**Pilar 1: Motor de Execução `gingaf`**
+- Ambiente desacoplado e multiplataforma para execução de aplicações NCL e HTML5.
+
+**Pilar 2: Portal Web `ginga.org.br`**
+- Centro unificado de conhecimento, manual NCL, tutoriais e referências aos padrões técnicos.
+
+**Pilar 3: Ambiente Interativo `ginga-playground`**
+- Ambiente web interativo para editar e executar aplicações NCL e HTML5 instantaneamente no navegador.
+
+**Pilar 4: Extensão para VS Code `ginga-code`**
+- Integração com IDE oferecendo destaque de sintaxe, execução de aplicações e ponte de depuração em tempo real.
+
+---
+
+# Arquitetura do Ecossistema
 
 <div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
 
 <div>
 
-**Modern Architecture**
-- Built with modern static site generation (Zensical).
-- Multilingual documentation: Portuguese, Spanish, and English.
+**Núcleo Unificado**
+- Todos os quatro pilares convergem na arquitetura desacoplada do motor `gingaf`.
+- Semântica compartilhada de análise sintática e execução em fluxos de trabalho desktop e web.
 
-**Hosted Resources**
-- Getting started guides for new Ginga developers.
-- Comprehensive NCL tag and attribute handbook.
-- Official SBTVD and ITU-T specifications.
-- Curated examples and interactive code snippets.
-
-</div>
-
-<div style="display: flex; justify-content: center; align-items: flex-start;">
-
-<img src="assets/portal2.png" />
-
-</div>
-
-</div>
-
----
-
-# Pillar 2: ginga-playground Workbench
-
-<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
-
-<div>
-
-**Zero-Installation Web Execution**
-- Runs directly inside any modern browser using WebAssembly / CanvasKit.
-- Powered by the headless `gingaf` engine.
-
-**Interactive Capabilities**
-- Split-pane layout: code editor on the left, live TV preview on the right.
-- Pre-loaded interactive catalog of NCL, Lua, and HTML5 sample applications.
-- Instant re-rendering upon code edits without page reload.
-- Virtual remote control interface to simulate DTV keypresses.
-
-</div>
-
-<div style="display: flex; justify-content: center; align-items: flex-start;">
-
-<img src="assets/playground.png" />
-
-</div>
-
-</div>
-
----
-
-# Pillar 3: ginga-code VS Code Extension
-
-<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
-
-<div>
-
-**Official Marketplace Availability**
-- Published directly to Visual Studio Code Marketplace and Open VSX.
-
-**Modern Developer Workflows**
-- Rich XML and NCL syntax awareness and schema validation.
-- One-click launch to preview applications locally or in the browser.
-- Debug bridge connecting IDE breakpoints to `gingaf` execution states.
-- Template generation for rapid prototyping of TV 2.5 and TV 3.0 applications.
-
-</div>
-
-<div style="display: flex; justify-content: center; align-items: flex-start;">
-
-<img src="assets/vscode.png" />
-
-</div>
-
-</div>
-
----
-
-# Ecosystem Architecture
-
-<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
-
-<div>
-
-**Unified Backbone**
-- All three pillars converge on the decoupled `gingaf` engine architecture.
-- Shared parser and execution semantics across web and desktop workflows.
-
-**Workflow Synergy**
-- Developers learn concepts on `ginga.org.br`.
-- Prototype and share minimal reproducible examples via `ginga-playground`.
-- Build production applications in Visual Studio Code with `ginga-code`.
+**Sinergia de Fluxo de Trabalho**
+- Desenvolvedores aprendem conceitos em `ginga.org.br`.
+- Prototipam e compartilham exemplos mínimos reproduzíveis através do `ginga-playground`.
+- Constroem aplicações prontas para produção no Visual Studio Code com o `ginga-code`.
 
 </div>
 
@@ -191,12 +178,176 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 
 ---
 
-# Final Remarks
+<!-- _class: invert -->
+<!-- _paginate: skip -->
 
-- Successfully eliminates high setup friction for digital television interactive application development.
-- Provides zero-install accessibility for students, researchers, and professional broadcast developers.
-- Entire ecosystem is open-source and publicly hosted under the `ginga-org-br` organization.
-- Accessible online at `http://ginga.org.br`.
+# Funcionalidades e Demo do gingaf
+
+---
+
+## NCL+links, NCL+grade_de_vídeos, NCL+embNCL e NCL+navegação
+
+<div class="grid-2x2">
+  <div class="grid-card">
+    <img src="assets/gifs/video.ncl.gif" alt="video.ncl" />
+    <p>NCL com links básicos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/video_grid.ncl.gif" alt="video_grid.ncl" />
+    <p>NCL com grade de vídeos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/emb_ncl.ncl.gif" alt="emb_ncl.ncl" />
+    <p>NCL embutido em NCL (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/focus_nav.ncl.gif" alt="focus_nav.ncl" />
+    <p>NCL com navegação de foco e seleção (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
+  </div>
+</div>
+
+---
+
+## NCLua, HTML+CCWS, NCL+embHTML e NCL+multiusuário
+
+<div class="grid-2x2">
+  <div class="grid-card">
+    <img src="assets/gifs/lua_canvas.ncl.gif" alt="lua_canvas.ncl" />
+    <p>NCL com desenho em tela Lua e teclas (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
+    <p>HTML com CCWS /current-service/ (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
+    <p>NCL com documento HTML embutido (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/multiuser_profile.gif" alt="multiuser_profile/main.ncl" />
+    <p>NCL com troca de perfil multiusuário e publicidade direcionada (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
+  </div>
+</div>
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# Portal Web ginga.org.br
+
+---
+
+# Pilar 2: Portal Web ginga.org.br
+
+<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
+
+<div>
+
+**Arquitetura Moderna**
+- Construído com gerador de sites estáticos moderno (Zensical).
+- Documentação multilíngue: português, espanhol e inglês.
+
+**Recursos Hospedados**
+- Guias introdutórios para novos desenvolvedores Ginga.
+- Manual abrangente de tags e atributos NCL.
+- Especificações oficiais do SBTVD e da ITU-T.
+- Exemplos selecionados e trechos interativos de código.
+
+</div>
+
+<div style="display: flex; justify-content: center; align-items: flex-start;">
+
+<img src="assets/portal2.png" />
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# Ambiente Interativo ginga-playground
+
+---
+
+# Pilar 3: Ambiente Interativo ginga-playground
+
+<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
+
+<div>
+
+**Execução Web Sem Instalação**
+- Executa diretamente em qualquer navegador moderno usando WebAssembly / CanvasKit.
+- Impulsionado pelo motor desacoplado `gingaf`.
+
+**Capacidades Interativas**
+- Layout dividido: editor de código à esquerda, pré-visualização ao vivo da TV à direita.
+- Catálogo interativo pré-carregado com aplicações de exemplo em NCL, Lua e HTML5.
+- Renderização instantânea após edições de código, sem recarregar a página.
+- Controle remoto virtual para simular o pressionamento de teclas da DTV.
+
+</div>
+
+<div style="display: flex; justify-content: center; align-items: flex-start;">
+
+<img src="assets/playground.png" />
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# Extensão para VS Code ginga-code
+
+---
+
+# Pilar 4: Extensão para VS Code ginga-code
+
+<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
+
+<div>
+
+**Disponibilidade Oficial no Marketplace**
+- Publicada diretamente no Visual Studio Code Marketplace e Open VSX.
+
+**Fluxos de Trabalho Modernos**
+- Reconhecimento de sintaxe e validação de esquemas XML e NCL.
+- Execução com um clique para pré-visualizar aplicações localmente ou no navegador.
+- Ponte de depuração conectando breakpoints da IDE aos estados de execução do `gingaf`.
+- Geração de templates para prototipagem rápida de aplicações de TV 2.5 e TV 3.0.
+
+</div>
+
+<div style="display: flex; justify-content: center; align-items: flex-start;">
+
+<img src="assets/vscode.png" />
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# Considerações Finais
+
+---
+
+# Considerações Finais
+
+- Elimina com sucesso o atrito inicial de configuração para o desenvolvimento de aplicações interativas de TV digital.
+- Proporciona acesso imediato e sem instalação para estudantes, pesquisadores e desenvolvedores profissionais.
+- Todo o ecossistema é open-source e hospedado publicamente na organização `ginga-org-br`.
+- Acessível online em `http://ginga.org.br`.
 
 ---
 
@@ -205,19 +356,19 @@ _paginate: false
 _header: ""
 -->
 
-# Thank You!
+# Obrigado!
 
 <div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
 
 <div>
 
-### Questions & Discussion
+### Dúvidas e Discussão
 
 - **Portal**: https://ginga.org.br
 - **Playground**: https://ginga.org.br/gingaf/playground/
-- **VS Code Extension**: https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code
-- **Repository**: https://github.com/ginga-org-br
-- **Contact**: `a.guedes@reading.ac.uk` | `danielmoraes@telemidia.puc-rio.br`
+- **Extensão VS Code**: https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code
+- **Repositório**: https://github.com/ginga-org-br
+- **Contato**: `a.guedes@reading.ac.uk` | `danielmoraes@telemidia.puc-rio.br`
 
 </div>
 
