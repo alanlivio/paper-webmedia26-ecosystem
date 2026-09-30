@@ -64,7 +64,7 @@ _header: ""
 # A New Ginga Developer Ecosystem: ginga.org.br Portal, ginga-playground and ginga-code Tools
 
 **Alan L. V. Guedes**$^1$, **Paulo Victor Borges**$^2$, **Daniel Moraes**$^2$, **Sergio Colcher**$^2$
-$^1$Universidade de Reading, Reino Unido | $^2$PUC-Rio, Brasil
+$^1$University of Reading, UK | $^2$PUC-Rio, BR
 
 *XXXII Simpósio Brasileiro de Sistemas Multimídia e Web (WebMedia 2026)*
 
@@ -88,6 +88,7 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 # Agenda
 
 - **Contexto e Definição do Problema**
+- **Funcionalidades do gingaf**
 - **Solução Proposta**
 - **Considerações Finais**
 
@@ -131,6 +132,59 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 <!-- _class: invert -->
 <!-- _paginate: skip -->
 
+# Funcionalidades do gingaf
+
+---
+
+## NCL com Links, Grade de Vídeos, NCL Embutido e Navegação
+
+<div class="grid-2x2">
+  <div class="grid-card">
+    <img src="assets/gifs/video.ncl.gif" alt="video.ncl" />
+    <p>NCL com links básicos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/video_grid.ncl.gif" alt="video_grid.ncl" />
+    <p>NCL com grade de vídeos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/emb_ncl.ncl.gif" alt="emb_ncl.ncl" />
+    <p>NCL embutido em NCL (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/focus_nav.ncl.gif" alt="focus_nav.ncl" />
+    <p>NCL com navegação de foco e seleção (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
+  </div>
+</div>
+
+---
+
+## NCLua, HTML+CCWS, HTML Embutido e Multiusuário
+
+<div class="grid-2x2">
+  <div class="grid-card">
+    <img src="assets/gifs/lua_canvas.ncl.gif" alt="lua_canvas.ncl" />
+    <p>NCL com desenho em tela Lua e teclas (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
+    <p>HTML com CCWS /current-service/ (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
+    <p>NCL com documento HTML embutido (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/multiuser_profile.gif" alt="multiuser_profile/main.ncl" />
+    <p>NCL com troca de perfil multiusuário e publicidade direcionada (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
+  </div>
+</div>
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
 # Solução Proposta
 
 ---
@@ -141,7 +195,7 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 - Ambiente desacoplado e multiplataforma para execução de aplicações NCL e HTML5.
 
 **Pilar 2: Portal Web `ginga.org.br`**
-- Centro unificado de conhecimento, manual NCL, tutoriais e referências aos padrões técnicos.
+- Centro unificado de conhecimento, manual do NCL, tutoriais e referências aos padrões técnicos.
 
 **Pilar 3: Ambiente Interativo `ginga-playground`**
 - Ambiente web interativo para editar e executar aplicações NCL e HTML5 instantaneamente no navegador.
@@ -181,59 +235,6 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 <!-- _class: invert -->
 <!-- _paginate: skip -->
 
-# Funcionalidades e Demo do gingaf
-
----
-
-## NCL+links, NCL+grade_de_vídeos, NCL+embNCL e NCL+navegação
-
-<div class="grid-2x2">
-  <div class="grid-card">
-    <img src="assets/gifs/video.ncl.gif" alt="video.ncl" />
-    <p>NCL com links básicos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/video_grid.ncl.gif" alt="video_grid.ncl" />
-    <p>NCL com grade de vídeos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/emb_ncl.ncl.gif" alt="emb_ncl.ncl" />
-    <p>NCL embutido em NCL (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/focus_nav.ncl.gif" alt="focus_nav.ncl" />
-    <p>NCL com navegação de foco e seleção (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
-  </div>
-</div>
-
----
-
-## NCLua, HTML+CCWS, NCL+embHTML e NCL+multiusuário
-
-<div class="grid-2x2">
-  <div class="grid-card">
-    <img src="assets/gifs/lua_canvas.ncl.gif" alt="lua_canvas.ncl" />
-    <p>NCL com desenho em tela Lua e teclas (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
-    <p>HTML com CCWS /current-service/ (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
-    <p>NCL com documento HTML embutido (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/multiuser_profile.gif" alt="multiuser_profile/main.ncl" />
-    <p>NCL com troca de perfil multiusuário e publicidade direcionada (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
-  </div>
-</div>
-
----
-
-<!-- _class: invert -->
-<!-- _paginate: skip -->
-
 # Portal Web ginga.org.br
 
 ---
@@ -250,7 +251,7 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 
 **Recursos Hospedados**
 - Guias introdutórios para novos desenvolvedores Ginga.
-- Manual abrangente de tags e atributos NCL.
+- Manual abrangente de tags e atributos do NCL.
 - Especificações oficiais do SBTVD e da ITU-T.
 - Exemplos selecionados e trechos interativos de código.
 
@@ -347,7 +348,7 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 - Elimina com sucesso o atrito inicial de configuração para o desenvolvimento de aplicações interativas de TV digital.
 - Proporciona acesso imediato e sem instalação para estudantes, pesquisadores e desenvolvedores profissionais.
 - Todo o ecossistema é open-source e hospedado publicamente na organização `ginga-org-br`.
-- Acessível online em `http://ginga.org.br`.
+- Acessível online em `https://ginga.org.br`.
 
 ---
 
