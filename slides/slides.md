@@ -101,83 +101,41 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 
 ---
 
-# Contexto e Definição do Problema
+# O Middleware de DTV Ginga
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 32px; align-items: start; margin-top: 12px;">
-
-<div>
-
-**Contexto: Ampla Disseminação da DTV**
-- O Ginga (ITU-T H.761 / ABNT 15606-2) está instalado em 100% dos receptores de TV Digital certificados na América Latina.
-- Alcance diário superior a 60 milhões de telespectadores.
-- Padrão essencial para serviços interativos de transmissão na TV 2.5 e TV 3.0.
-
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px; width: 100%;">
+  <div style="display: flex; justify-content: space-between; gap: 24px; width: 100%;">
+    <div style="flex: 1 1 0; min-width: 0; display: flex; justify-content: center; align-items: center; height: 215px;">
+      <img src="assets/Picture1.png" style="max-height: 215px; max-width: 100%; object-fit: contain; border-radius: 6px; border: 1px solid #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" />
+    </div>
+    <div style="flex: 1 1 0; min-width: 0; display: flex; justify-content: center; align-items: center; height: 215px;">
+      <img src="assets/Picture2.jpg" style="max-height: 215px; max-width: 100%; object-fit: contain; border-radius: 6px; border: 1px solid #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" />
+    </div>
+  </div>
+  <div style="display: flex; justify-content: space-between; gap: 24px; width: 100%;">
+    <div style="flex: 1 1 0; min-width: 0; display: flex; justify-content: center; align-items: center; height: 215px;">
+      <img src="assets/Picture3.png" style="max-height: 215px; max-width: 100%; object-fit: contain; border-radius: 6px; border: 1px solid #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" />
+    </div>
+    <div style="flex: 1 1 0; min-width: 0; display: flex; justify-content: center; align-items: center; height: 215px;">
+      <img src="assets/Picture4.jpg" style="max-height: 215px; max-width: 100%; object-fit: contain; border-radius: 6px; border: 1px solid #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" />
+    </div>
+  </div>
 </div>
 
-<div>
+Definido na serie de normas SBTVD ABNT 15606.
 
-**Problema: O Desafio dos Desenvolvedores**
-- Lacuna de ferramental: carência de ambientes leves e acessíveis para desenvolvimento e testes.
-- Fluxos tradicionais exigiam toolchains Linux nativas, compilação em C++ ou receptores de TV (STBs) dedicados.
-
-**Objetivo**
-- Reduzir barreiras de entrada com ferramentas modernas para web e IDEs, sem necessidade de instalação.
-
-</div>
-
-</div>
+Presente receptores de TV Digital certificados no Brasil e América Latina (>60M telespectadores)
 
 ---
 
-<!-- _class: invert -->
-<!-- _paginate: skip -->
+# Ecosistema de Desenvolvimento Ginga é limatado
 
-# Funcionalidades do gingaf
+**Ansência de ambiente portátil e "zero-install"**: de  fácil acesso, completo e aberto.
+- Podemos comparar o Mozilla https://developer.mozilla.org/ e a Ginga-VM (2010)
 
----
-
-## NCL com Links, Grade de Vídeos, NCL Embutido e Navegação
-
-<div class="grid-2x2">
-  <div class="grid-card">
-    <img src="assets/gifs/video.ncl.gif" alt="video.ncl" />
-    <p>NCL com links básicos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/video_grid.ncl.gif" alt="video_grid.ncl" />
-    <p>NCL com grade de vídeos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/emb_ncl.ncl.gif" alt="emb_ncl.ncl" />
-    <p>NCL embutido em NCL (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/focus_nav.ncl.gif" alt="focus_nav.ncl" />
-    <p>NCL com navegação de foco e seleção (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
-  </div>
-</div>
-
----
-
-## NCLua, HTML+CCWS, HTML Embutido e Multiusuário
-
-<div class="grid-2x2">
-  <div class="grid-card">
-    <img src="assets/gifs/lua_canvas.ncl.gif" alt="lua_canvas.ncl" />
-    <p>NCL com desenho em tela Lua e teclas (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
-    <p>HTML com CCWS /current-service/ (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
-    <p>NCL com documento HTML embutido (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/multiuser_profile.gif" alt="multiuser_profile/main.ncl" />
-    <p>NCL com troca de perfil multiusuário e publicidade direcionada (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
-  </div>
+<div style="display: flex; justify-content: center; gap: 24px; align-items: center; margin-top: 12px;">
+  <img src="assets/image.png" style="width: 500px; object-fit: contain;" />
+  <img src="assets/image-1.png" style="width: 500px; object-fit: contain;" />
 </div>
 
 ---
@@ -235,7 +193,64 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 <!-- _class: invert -->
 <!-- _paginate: skip -->
 
-# Portal Web ginga.org.br
+# Pillar 1: gingaf
+
+---
+
+# Pillar 1: gingaf
+
+## NCL com Links, Grade de Vídeos, NCL Embutido e Navegação
+
+<div class="grid-2x2">
+  <div class="grid-card">
+    <img src="assets/gifs/video.ncl.gif" alt="video.ncl" />
+    <p>NCL com links básicos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/video_grid.ncl.gif" alt="video_grid.ncl" />
+    <p>NCL com grade de vídeos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/emb_ncl.ncl.gif" alt="emb_ncl.ncl" />
+    <p>NCL embutido em NCL (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/focus_nav.ncl.gif" alt="focus_nav.ncl" />
+    <p>NCL com navegação de foco e seleção (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
+  </div>
+</div>
+
+---
+
+# Pillar 1: gingaf
+
+## NCLua, HTML+CCWS, HTML Embutido e Multiusuário
+
+<div class="grid-2x2">
+  <div class="grid-card">
+    <img src="assets/gifs/lua_canvas.ncl.gif" alt="lua_canvas.ncl" />
+    <p>NCL com desenho em tela Lua e teclas (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
+    <p>HTML com CCWS /current-service/ (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
+    <p>NCL com documento HTML embutido (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
+  </div>
+  <div class="grid-card">
+    <img src="assets/gifs/multiuser_profile.gif" alt="multiuser_profile/main.ncl" />
+    <p>NCL com troca de perfil multiusuário e publicidade direcionada (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
+  </div>
+</div>
+
+---
+
+<!-- _class: invert -->
+<!-- _paginate: skip -->
+
+# Pilar 2: Portal Web ginga.org.br
 
 ---
 
