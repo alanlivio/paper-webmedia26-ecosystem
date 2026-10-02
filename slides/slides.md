@@ -88,7 +88,6 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 # Agenda
 
 - **Contexto e Definição do Problema**
-- **Funcionalidades do gingaf**
 - **Solução Proposta**
 - **Considerações Finais**
 
@@ -122,15 +121,15 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
   </div>
 </div>
 
-Definido na serie de normas SBTVD ABNT 15606.
+Definido na série de normas SBTVD ABNT 15606.
 
-Presente receptores de TV Digital certificados no Brasil e América Latina (>60M telespectadores)
+Presente em receptores de TV Digital certificados no Brasil e América Latina (>60M telespectadores)
 
 ---
 
-# Ecosistema de Desenvolvimento Ginga é limatado
+# Ecossistema de Desenvolvimento Ginga é limitado
 
-**Ansência de ambiente portátil e "zero-install"**: de  fácil acesso, completo e aberto.
+**Ausência de ambiente portátil e "zero-install"**: de fácil acesso, completo e aberto.
 - Podemos comparar o Mozilla https://developer.mozilla.org/ e a Ginga-VM (2010)
 
 <div style="display: flex; justify-content: center; gap: 24px; align-items: center; margin-top: 12px;">
@@ -193,11 +192,11 @@ Presente receptores de TV Digital certificados no Brasil e América Latina (>60M
 <!-- _class: invert -->
 <!-- _paginate: skip -->
 
-# Pillar 1: gingaf
+# Pilar 1: gingaf
 
 ---
 
-# Pillar 1: gingaf
+# Pilar 1: gingaf
 
 ## NCL com Links, Grade de Vídeos, NCL Embutido e Navegação
 
@@ -222,7 +221,7 @@ Presente receptores de TV Digital certificados no Brasil e América Latina (>60M
 
 ---
 
-# Pillar 1: gingaf
+# Pilar 1: gingaf
 
 ## NCLua, HTML+CCWS, HTML Embutido e Multiusuário
 
@@ -285,7 +284,7 @@ Presente receptores de TV Digital certificados no Brasil e América Latina (>60M
 <!-- _class: invert -->
 <!-- _paginate: skip -->
 
-# Ambiente Interativo ginga-playground
+# Pilar 3: Ambiente Interativo ginga-playground
 
 ---
 
@@ -320,7 +319,7 @@ Presente receptores de TV Digital certificados no Brasil e América Latina (>60M
 <!-- _class: invert -->
 <!-- _paginate: skip -->
 
-# Extensão para VS Code ginga-code
+# Pilar 4: Extensão para VS Code ginga-code
 
 ---
 
