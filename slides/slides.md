@@ -359,10 +359,12 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
 
 # Considerações Finais
 
-- Elimina com sucesso o atrito inicial de configuração para o desenvolvimento de aplicações interativas de TV digital.
-- Proporciona acesso imediato e sem instalação para estudantes, pesquisadores e desenvolvedores profissionais.
-- Todo o ecossistema é open-source e hospedado publicamente na organização `ginga-org-br`.
-- Acessível online em `https://ginga.org.br`.
+**Contribuições Principais**:
+- **Portal `ginga.org.br`**: Hub unificado de documentação e especificações para a comunidade Ginga.
+- **`ginga-playground`**: Workbench web interativo no navegador para prototipação sem instalação local.
+- **`ginga-code`**: Extensão para VS Code que integra launcher e execução direta no desktop.
+
+**Impacto**: Elimina o atrito inicial de configuração e viabiliza acesso imediato a estudantes, pesquisadores e desenvolvedores (código aberto em `https://ginga.org.br`).
 
 ---
 
