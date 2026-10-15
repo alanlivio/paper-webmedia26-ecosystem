@@ -203,19 +203,19 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
 <div class="grid-2x2">
   <div class="grid-card">
     <img src="assets/gifs/video.ncl.gif" alt="video.ncl" />
-    <p>NCL com links básicos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
+    <p>NCL com links básicos (<a href="https://ginga.org.br/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
   </div>
   <div class="grid-card">
     <img src="assets/gifs/video_grid.ncl.gif" alt="video_grid.ncl" />
-    <p>NCL com grade de vídeos (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
+    <p>NCL com grade de vídeos (<a href="https://ginga.org.br/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
   </div>
   <div class="grid-card">
     <img src="assets/gifs/emb_ncl.ncl.gif" alt="emb_ncl.ncl" />
-    <p>NCL embutido em NCL (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
+    <p>NCL embutido em NCL (<a href="https://ginga.org.br/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
   </div>
   <div class="grid-card">
     <img src="assets/gifs/focus_nav.ncl.gif" alt="focus_nav.ncl" />
-    <p>NCL com navegação de foco e seleção (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
+    <p>NCL com navegação de foco e seleção (<a href="https://ginga.org.br/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
   </div>
 </div>
 
@@ -228,7 +228,7 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
 <div class="grid-2x2">
   <div class="grid-card">
     <img src="assets/gifs/lua_canvas.ncl.gif" alt="lua_canvas.ncl" />
-    <p>NCL com desenho em tela Lua e teclas (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
+    <p>NCL com desenho em tela Lua e teclas (<a href="https://ginga.org.br/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
   </div>
   <div class="grid-card">
     <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
@@ -236,11 +236,11 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
   </div>
   <div class="grid-card">
     <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
-    <p>NCL com documento HTML embutido (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
+    <p>NCL com documento HTML embutido (<a href="https://ginga.org.br/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
   </div>
   <div class="grid-card">
     <img src="assets/gifs/multiuser_profile.gif" alt="multiuser_profile/main.ncl" />
-    <p>NCL com troca de perfil multiusuário e publicidade direcionada (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
+    <p>NCL com troca de perfil multiusuário e publicidade direcionada (<a href="https://ginga.org.br/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
   </div>
 </div>
 
