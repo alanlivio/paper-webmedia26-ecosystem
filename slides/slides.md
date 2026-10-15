@@ -232,7 +232,7 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
   </div>
   <div class="grid-card">
     <img src="assets/gifs/current_service.html.gif" alt="current_service.html" />
-    <p>HTML com CCWS /current-service/ (<a href="https://ginga-org-br.github.io/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
+    <p>HTML com CCWS /current-service/ (<a href="https://ginga.org.br/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
   </div>
   <div class="grid-card">
     <img src="assets/gifs/emb_html.ncl.gif" alt="emb_html.ncl" />
