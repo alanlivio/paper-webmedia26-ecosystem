@@ -2,14 +2,17 @@
 site_name = "A new Ginga Developer Ecosystem with ginga.org.br portal, ginga-playground and ginga-code tools"
 site_description = "Unified developer ecosystem for Nested Context Language (NCL) integrating ginga.org.br, ginga-playground, and ginga-vscode."
 site_author = "Alan L.V. Guedes"
+site_url = "https://alanlivio.github.io/paper-webmedia26-ecosystem/"
 copyright = "Copyright &copy; 2026 The authors"
+docs_dir = "website/docs"
+site_dir = "website/site"
 extra_css = ["stylesheets/extra.css"]
 
 [project.plugins]
 search = { enabled = false }
 
 [project.theme]
-custom_dir = "overrides"
+custom_dir = "website/overrides"
 features = ["navigation.instant", "content.code.copy", "content.code.select"]
 
 [project.theme.font]

@@ -5,7 +5,7 @@
 
 Website for the paper **A new Ginga Developer Ecosystem with ginga.org.br portal, ginga-playground and ginga-code tools**, published at the **XXXII Simpósio Brasileiro de Sistemas Multimídia e Web (WebMedia 2026)**.
 
-- `paper/` — LaTeX source
+- `src/` — LaTeX source
 - `slides/` — presentation slides using Marp
 - `website/` — static webpage using Zensical
 
