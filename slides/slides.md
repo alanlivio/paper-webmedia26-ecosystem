@@ -3,85 +3,31 @@ marp: true
 theme: default
 paginate: true
 header: 'Ginga Developer Ecosystem — WTVDI / WebMedia 2026'
+style: |
+  @import url('https://cdn.jsdelivr.net/gh/alanlivio/marp-utils@v0.1/marp-utils.css');
 ---
-
-<style>
-.grayscale {
-  filter: grayscale(100%);
-}
-.grid-2x2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 14px 28px;
-  width: 100%;
-  margin-top: 8px;
-}
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 18px;
-  width: 100%;
-  margin-top: 18px;
-}
-.grid-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.grid-card img {
-  width: 100%;
-  max-height: 165px;
-  object-fit: contain;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  background-color: transparent;
-  box-shadow: none;
-}
-.grid-card p {
-  margin: 6px 0 0 0;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.3;
-  color: #1f2328;
-}
-.grid-card a {
-  color: #0969da;
-  font-weight: 700;
-  text-decoration: underline;
-}
-</style>
 
 <!--
 _paginate: false
 _header: ""
+_class: cols-3-1 vcenter
 -->
 
-<div style="display: grid; grid-template-columns: 3fr 1fr; align-items: center;">
+- # A New Ginga Developer Ecosystem: ginga.org.br Portal, ginga-playground and ginga-code Tools
 
-<div>
+  **Alan L. V. Guedes**$^1$, **Paulo Victor Borges**$^2$, **Daniel Moraes**$^2$, **Sergio Colcher**$^2$
+  $^1$University of Reading, UK | $^2$PUC-Rio, BR
 
-# A New Ginga Developer Ecosystem: ginga.org.br Portal, ginga-playground and ginga-code Tools
+  *XXXII Simpósio Brasileiro de Sistemas Multimídia e Web (WebMedia 2026)*
 
-**Alan L. V. Guedes**$^1$, **Paulo Victor Borges**$^2$, **Daniel Moraes**$^2$, **Sergio Colcher**$^2$
-$^1$University of Reading, UK | $^2$PUC-Rio, BR
+  **Website do Artigo (slides, código, demo)**:
+  https://alanlivio.github.io/paper-webmedia26-ecosystem/
 
-*XXXII Simpósio Brasileiro de Sistemas Multimídia e Web (WebMedia 2026)*
+- ![h:160 grayscale](assets/uor.svg)
 
-**Website do Artigo (slides, código, demo)**:
-https://alanlivio.github.io/paper-webmedia26-ecosystem/
+  ![h:100 grayscale](assets/puc-rio.svg)
 
-</div>
-
-<div style="display: flex; flex-direction: column; justify-content: center;">
-
-<img src="assets/uor.svg" height="200" class="grayscale" />
-<img src="assets/puc-rio.svg" height="120" class="grayscale" />
-<img src="assets/qrcode.svg" height="250" />
-
-</div>
-
-</div>
+  ![h:200](assets/qrcode.svg)
 
 ---
 
@@ -100,42 +46,32 @@ https://alanlivio.github.io/paper-webmedia26-ecosystem/
 
 ---
 
+<!-- _class: grid-2x2 center -->
+
 # O Middleware de DTV Ginga
 
-<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px; width: 100%;">
-  <div style="display: flex; justify-content: space-between; gap: 24px; width: 100%;">
-    <div style="flex: 1 1 0; min-width: 0; display: flex; justify-content: center; align-items: center; height: 215px;">
-      <img src="assets/Picture1.png" style="max-height: 215px; max-width: 100%; object-fit: contain; border-radius: 6px; border: 1px solid #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" />
-    </div>
-    <div style="flex: 1 1 0; min-width: 0; display: flex; justify-content: center; align-items: center; height: 215px;">
-      <img src="assets/Picture2.jpg" style="max-height: 215px; max-width: 100%; object-fit: contain; border-radius: 6px; border: 1px solid #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" />
-    </div>
-  </div>
-  <div style="display: flex; justify-content: space-between; gap: 24px; width: 100%;">
-    <div style="flex: 1 1 0; min-width: 0; display: flex; justify-content: center; align-items: center; height: 215px;">
-      <img src="assets/Picture3.png" style="max-height: 215px; max-width: 100%; object-fit: contain; border-radius: 6px; border: 1px solid #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" />
-    </div>
-    <div style="flex: 1 1 0; min-width: 0; display: flex; justify-content: center; align-items: center; height: 215px;">
-      <img src="assets/Picture4.jpg" style="max-height: 215px; max-width: 100%; object-fit: contain; border-radius: 6px; border: 1px solid #d0d7de; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" />
-    </div>
-  </div>
-</div>
+- ![h:180](assets/Picture1.png)
 
-Definido na série de normas SBTVD ABNT 15606.
+- ![h:180](assets/Picture2.jpg)
 
-Presente em receptores de TV Digital certificados no Brasil e América Latina (>60M telespectadores)
+- ![h:180](assets/Picture3.png)
+
+- ![h:180](assets/Picture4.jpg)
+
+Definido na série de normas SBTVD ABNT 15606. Presente em receptores de TV Digital certificados no Brasil e América Latina (>60M telespectadores).
 
 ---
+
+<!-- _class: cols-2 vcenter -->
 
 # Ecossistema de Desenvolvimento Ginga é limitado
 
 **Ausência de ambiente portátil e "zero-install"**: de fácil acesso, completo e aberto.
-- Podemos comparar o Mozilla https://developer.mozilla.org/ e a Ginga-VM (2010)
+Podemos comparar o Mozilla (https://developer.mozilla.org/) e a Ginga-VM (2010)
 
-<div style="display: flex; justify-content: center; gap: 24px; align-items: center; margin-top: 12px;">
-  <img src="assets/image.png" style="width: 500px; object-fit: contain;" />
-  <img src="assets/image-1.png" style="width: 500px; object-fit: contain;" />
-</div>
+- ![w:500](assets/image.png)
+
+- ![w:500](assets/image-1.png)
 
 ---
 
@@ -146,46 +82,35 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
 
 ---
 
+<!-- _class: grid-2x2 -->
+
 # Os Quatro Pilares do Ecossistema
 
-**Pilar 1: Motor de Execução `gingaf`**
-- Ambiente desacoplado e multiplataforma para execução de aplicações NCL e HTML5.
+- **Pilar 1: Motor de Execução `gingaf`**
+  Ambiente desacoplado e multiplataforma para execução de aplicações NCL e HTML5.
 
-**Pilar 2: Portal Web `ginga.org.br`**
-- Centro unificado de conhecimento, manual do NCL, tutoriais e referências aos padrões técnicos.
+- **Pilar 2: Portal Web `ginga.org.br`**
+  Centro unificado de conhecimento, manual do NCL, tutoriais e referências aos padrões técnicos.
 
-**Pilar 3: Ambiente Interativo `ginga-playground`**
-- Ambiente web interativo para editar e executar aplicações NCL e HTML5 instantaneamente no navegador.
+- **Pilar 3: Ambiente Interativo `ginga-playground`**
+  Ambiente web interativo para editar e executar aplicações NCL e HTML5 instantaneamente no navegador.
 
-**Pilar 4: Extensão para VS Code `ginga-code`**
-- Integração com IDE oferecendo destaque de sintaxe, execução de aplicações e ponte de depuração em tempo real.
+- **Pilar 4: Extensão para VS Code `ginga-code`**
+  Integração com IDE oferecendo destaque de sintaxe, execução de aplicações e ponte de depuração em tempo real.
 
 ---
 
+<!-- _class: cols-3-1 vcenter -->
+
 # Arquitetura do Ecossistema
 
-<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
+- **Núcleo Unificado**
+  Todos os quatro pilares convergem na arquitetura desacoplada do motor `gingaf`, com semântica compartilhada de análise sintática e execução em fluxos de trabalho desktop e web.
 
-<div>
+  **Sinergia de Fluxo de Trabalho**
+  Desenvolvedores aprendem conceitos em `ginga.org.br`, prototipam e compartilham exemplos mínimos reproduzíveis através do `ginga-playground`, e constroem aplicações prontas para produção no Visual Studio Code com o `ginga-code`.
 
-**Núcleo Unificado**
-- Todos os quatro pilares convergem na arquitetura desacoplada do motor `gingaf`.
-- Semântica compartilhada de análise sintática e execução em fluxos de trabalho desktop e web.
-
-**Sinergia de Fluxo de Trabalho**
-- Desenvolvedores aprendem conceitos em `ginga.org.br`.
-- Prototipam e compartilham exemplos mínimos reproduzíveis através do `ginga-playground`.
-- Constroem aplicações prontas para produção no Visual Studio Code com o `ginga-code`.
-
-</div>
-
-<div style="display: flex; justify-content: center; align-items: flex-start;">
-
-<img src="assets/ecosystem.png" />
-
-</div>
-
-</div>
+- ![](assets/ecosystem.png)
 
 ---
 
@@ -195,54 +120,44 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
 # Pilar 1: gingaf
 
 ---
+
+<!-- _class: grid-2x2 center -->
 
 # Pilar 1: gingaf
 
 ## NCL com Links, Grade de Vídeos, NCL Embutido e Navegação
 
-<div class="grid-2x2">
-  <div class="grid-card">
-    <img src="assets/gifs/video.ncl.gif" />
-    <p>NCL com links básicos (<a href="https://ginga.org.br/gingaf/playground/?app=video.ncl">video.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/video_grid.ncl.gif" />
-    <p>NCL com grade de vídeos (<a href="https://ginga.org.br/gingaf/playground/?app=video_grid.ncl">video_grid.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/emb_ncl.ncl.gif" />
-    <p>NCL embutido em NCL (<a href="https://ginga.org.br/gingaf/playground/?app=emb_ncl.ncl">emb_ncl.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/focus_nav.ncl.gif" />
-    <p>NCL com navegação de foco e seleção (<a href="https://ginga.org.br/gingaf/playground/?app=focus_nav.ncl">focus_nav.ncl</a>)</p>
-  </div>
-</div>
+- ![h:155](assets/gifs/video.ncl.gif)
+  NCL com links básicos ([video.ncl](https://ginga.org.br/gingaf/playground/?app=video.ncl))
+
+- ![h:155](assets/gifs/video_grid.ncl.gif)
+  NCL com grade de vídeos ([video_grid.ncl](https://ginga.org.br/gingaf/playground/?app=video_grid.ncl))
+
+- ![h:155](assets/gifs/emb_ncl.ncl.gif)
+  NCL embutido em NCL ([emb_ncl.ncl](https://ginga.org.br/gingaf/playground/?app=emb_ncl.ncl))
+
+- ![h:155](assets/gifs/focus_nav.ncl.gif)
+  NCL com navegação de foco e seleção ([focus_nav.ncl](https://ginga.org.br/gingaf/playground/?app=focus_nav.ncl))
 
 ---
+
+<!-- _class: grid-2x2 center -->
 
 # Pilar 1: gingaf
 
 ## NCLua, HTML+CCWS, HTML Embutido e Multiusuário
 
-<div class="grid-2x2">
-  <div class="grid-card">
-    <img src="assets/gifs/lua_canvas.ncl.gif" />
-    <p>NCL com desenho em tela Lua e teclas (<a href="https://ginga.org.br/gingaf/playground/?app=lua_canvas.ncl">lua_canvas.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/current_service.html.gif" />
-    <p>HTML com CCWS /current-service/ (<a href="https://ginga.org.br/gingaf/playground/?app=current_service.html">current_service.html</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/emb_html.ncl.gif" />
-    <p>NCL com documento HTML embutido (<a href="https://ginga.org.br/gingaf/playground/?app=emb_html.ncl">emb_html.ncl</a>)</p>
-  </div>
-  <div class="grid-card">
-    <img src="assets/gifs/multiuser_profile.gif" />
-    <p>NCL com troca de perfil multiusuário e publicidade direcionada (<a href="https://ginga.org.br/gingaf/playground/?app=multiuser_profile/main.ncl">multiuser_profile/main.ncl</a>)</p>
-  </div>
-</div>
+- ![h:155](assets/gifs/lua_canvas.ncl.gif)
+  NCL com desenho em tela Lua e teclas ([lua_canvas.ncl](https://ginga.org.br/gingaf/playground/?app=lua_canvas.ncl))
+
+- ![h:155](assets/gifs/current_service.html.gif)
+  HTML com CCWS /current-service/ ([current_service.html](https://ginga.org.br/gingaf/playground/?app=current_service.html))
+
+- ![h:155](assets/gifs/emb_html.ncl.gif)
+  NCL com documento HTML embutido ([emb_html.ncl](https://ginga.org.br/gingaf/playground/?app=emb_html.ncl))
+
+- ![h:155](assets/gifs/multiuser_profile.gif)
+  NCL com troca de perfil multiusuário ([multiuser_profile/main.ncl](https://ginga.org.br/gingaf/playground/?app=multiuser_profile/main.ncl))
 
 ---
 
@@ -253,31 +168,17 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
 
 ---
 
+<!-- _class: cols-2 vcenter -->
+
 # Pilar 2: Portal Web ginga.org.br
 
-<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
+- **Arquitetura Moderna**
+  Construído com gerador de sites estáticos moderno (Zensical) e documentação multilíngue: português, espanhol e inglês.
 
-<div>
+  **Recursos Hospedados**
+  Guias introdutórios para novos desenvolvedores Ginga, manual abrangente de tags e atributos do NCL, especificações oficiais do SBTVD e da ITU-T, e exemplos selecionados com trechos interativos de código.
 
-**Arquitetura Moderna**
-- Construído com gerador de sites estáticos moderno (Zensical).
-- Documentação multilíngue: português, espanhol e inglês.
-
-**Recursos Hospedados**
-- Guias introdutórios para novos desenvolvedores Ginga.
-- Manual abrangente de tags e atributos do NCL.
-- Especificações oficiais do SBTVD e da ITU-T.
-- Exemplos selecionados e trechos interativos de código.
-
-</div>
-
-<div style="display: flex; justify-content: center; align-items: flex-start;">
-
-<img src="assets/portal2.png" />
-
-</div>
-
-</div>
+- ![](assets/portal2.png)
 
 ---
 
@@ -288,31 +189,17 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
 
 ---
 
+<!-- _class: cols-2 vcenter -->
+
 # Pilar 3: Ambiente Interativo ginga-playground
 
-<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
+- **Execução Web Sem Instalação**
+  Executa diretamente em qualquer navegador moderno usando WebAssembly / CanvasKit, impulsionado pelo motor desacoplado `gingaf`.
 
-<div>
+  **Capacidades Interativas**
+  Layout dividido (editor de código à esquerda e pré-visualização ao vivo da TV à direita), catálogo interativo pré-carregado com aplicações em NCL, Lua e HTML5, renderização instantânea sem recarregar a página e controle remoto virtual.
 
-**Execução Web Sem Instalação**
-- Executa diretamente em qualquer navegador moderno usando WebAssembly / CanvasKit.
-- Impulsionado pelo motor desacoplado `gingaf`.
-
-**Capacidades Interativas**
-- Layout dividido: editor de código à esquerda, pré-visualização ao vivo da TV à direita.
-- Catálogo interativo pré-carregado com aplicações de exemplo em NCL, Lua e HTML5.
-- Renderização instantânea após edições de código, sem recarregar a página.
-- Controle remoto virtual para simular o pressionamento de teclas da DTV.
-
-</div>
-
-<div style="display: flex; justify-content: center; align-items: flex-start;">
-
-<img src="assets/playground.png" />
-
-</div>
-
-</div>
+- ![](assets/playground.png)
 
 ---
 
@@ -323,27 +210,18 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
 
 ---
 
+<!-- _class: cols-2 vcenter -->
+
 # Pilar 4: Extensão para VS Code ginga-code
 
-<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
+- **Disponibilidade Oficial no Marketplace**
+  https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code
+  Execução com um clique para pré-visualizar aplicações localmente ou no navegador.
 
-<div>
+  **Fluxos de Trabalho Modernos**
+  Depuração conectando breakpoints da IDE aos estados de execução do `gingaf`.
 
-**Disponibilidade Oficial no Marketplace**: https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code
-- Execução com um clique para pré-visualizar aplicações localmente ou no navegador.
-
-**Trabalho Modernos**
-- Depuração conectando breakpoints da IDE aos estados de execução do `gingaf`.
-
-</div>
-
-<div style="display: flex; justify-content: center; align-items: flex-start;">
-
-<img src="assets/gifs/vscode-launch.gif" />
-
-</div>
-
-</div>
+- ![](assets/gifs/vscode-launch.gif)
 
 ---
 
@@ -368,28 +246,21 @@ Presente em receptores de TV Digital certificados no Brasil e América Latina (>
 <!--
 _paginate: false
 _header: ""
+_class: cols-2 vcenter
 -->
 
 # Obrigado!
 
-<div style="display: grid; grid-template-columns: 3fr 2fr; align-items: start;">
+- ### Dúvidas e Discussão
 
-<div>
+  **Portal**: https://ginga.org.br
 
-### Dúvidas e Discussão
+  **Playground**: https://ginga.org.br/gingaf/playground/
 
-- **Portal**: https://ginga.org.br
-- **Playground**: https://ginga.org.br/gingaf/playground/
-- **Extensão VS Code**: https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code
-- **Repositório**: https://github.com/ginga-org-br
-- **Contato**: `a.guedes@reading.ac.uk` | `danielmoraes@telemidia.puc-rio.br`
+  **Extensão VS Code**: https://marketplace.visualstudio.com/items?itemName=ginga-org-br.ginga-code
 
-</div>
+  **Repositório**: https://github.com/ginga-org-br
 
-<div style="display: flex; justify-content: center; align-items: flex-start;">
+  **Contato**: `a.guedes@reading.ac.uk` | `danielmoraes@telemidia.puc-rio.br`
 
-<img src="assets/portal1.png" />
-
-</div>
-
-</div>
+- ![](assets/portal1.png)
